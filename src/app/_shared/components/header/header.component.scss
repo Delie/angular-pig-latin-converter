@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+
+#header {
+  padding: 5px;
+  color: #fff;
+  font-size: 3em;
+  background: $primary;
+}
+
+#headerLinks {
+  background: #ddd;
+  padding: 10px;
+}
+
+#headerLinks a { color:#222; margin-right:15px;}

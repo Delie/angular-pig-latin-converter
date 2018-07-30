@@ -1,0 +1,16 @@
+<h1>Converter</h1>
+<form (ngSubmit)="submitForm()" autocomplete="off">
+  <div class="form-group">
+    <label for="convertText">Text to Convert:</label>
+    <input [formControl]="convertText" type="text" class="form-control" id="convertText" name="convertText" placeholder="Enter Text...." />
+  </div>
+
+  <div class="alert alert-danger" [hidden]="convertText.untouched || convertText.valid">
+    Please populate the <strong>Text to Convert</strong> field.
+  </div>
+
+  <button class="btn btn-primary" [disabled]="!convertText.valid">
+    <span class="fa fa-wrench"> </span>
+    Convert
+  </button>
+</form>

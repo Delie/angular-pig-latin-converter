@@ -1,8 +1,8 @@
 @import './variables.scss';
 
-h1 {
-	font-size: 2.1rem;
-	padding: 0 0 5px 0;
-	margin: 0 0 15px 0;
-	color: $primary;
-}
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Font Awesome
+$fa-font-path: "/assets/lib/fontawesome/fonts/" !default;
+@import '~font-awesome/scss/font-awesome.scss';
