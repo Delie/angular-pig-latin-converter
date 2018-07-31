@@ -7,7 +7,7 @@ import { StateService } from '../_shared/services/state.service';
   styleUrls: ['./converter-history.component.scss']
 })
 export class ConverterHistoryComponent implements OnInit {
-  private history = [];
+  public history = [];
   constructor(private state: StateService) {
     this.loadHistory();
   }

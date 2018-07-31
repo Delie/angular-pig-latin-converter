@@ -12,7 +12,7 @@ import { RouterModule, Router, Route } from '@angular/router';
 
 export class ConverterComponent implements OnInit {
   convertText = new FormControl('', Validators.required);
-  private convertedText = '';
+  public convertedText = '';
 
   constructor(private state: StateService, private converter: ConverterService, private router: Router) { }
 

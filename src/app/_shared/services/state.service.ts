@@ -3,10 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class StateService {
   _state = {
-    History: [
-      { text: 'test1', result: 'result1' },
-      { text: 'test2', result: 'result2' }
-    ]
+    History: []
   };
 
   get state() {
