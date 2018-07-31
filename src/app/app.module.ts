@@ -12,6 +12,9 @@ import { AboutComponent } from './about/about.component';
 import { ConverterComponent } from './converter/converter.component';
 import { ConverterHistoryComponent } from './converter-history/converter-history.component';
 
+// Services
+import { ConverterService } from './converter/converter.service';
+
 export const ROUTES: Routes = [
   { path: '', component: ConverterComponent },
   { path: 'about', component: AboutComponent },
@@ -30,10 +33,12 @@ export const ROUTES: Routes = [
     SharedModule,
     BrowserModule,
     FormsModule,
-		ReactiveFormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES, { useHash: false })
   ],
-  providers: [],
+  providers: [
+    ConverterService
+  ],
   bootstrap: [
     AppComponent
   ]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from '../_shared/services/state.service';
 
 @Component({
   selector: 'app-converter-history',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./converter-history.component.scss']
 })
 export class ConverterHistoryComponent implements OnInit {
-
-  constructor() { }
+  private history = [];
+  constructor(private state: StateService) {
+    this.loadHistory();
+  }
 
   ngOnInit() {
   }
 
+  loadHistory() {
+    this.history = this.state.get('History');
+  }
 }

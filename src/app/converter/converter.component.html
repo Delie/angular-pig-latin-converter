@@ -1,16 +1,35 @@
-<h1>Converter</h1>
-<form (ngSubmit)="submitForm()" autocomplete="off">
-  <div class="form-group">
-    <label for="convertText">Text to Convert:</label>
-    <input [formControl]="convertText" type="text" class="form-control" id="convertText" name="convertText" placeholder="Enter Text...." />
-  </div>
+<div *ngIf="this.convertedText == ''">
+  <h1>Converter</h1>
+  <form (ngSubmit)="submitForm()" autocomplete="off">
+    <div class="form-group">
+      <label for="convertText">Text to Convert:</label>
+      <input [formControl]="convertText" type="text" class="form-control" id="convertText" name="convertText" placeholder="Enter Text...." />
+    </div>
+    <div class="alert alert-danger" [hidden]="convertText.untouched || convertText.valid">
+      Please populate the <strong>Text to Convert</strong> field.
+    </div>
+    <button class="btn btn-primary" [disabled]="!convertText.valid">
+      <span class="fa fa-wrench"> </span>
+      Convert
+    </button>
+  </form>
+  <hr />
+  <h2>Conversion Rules:</h2>
+  <ul>
+    <li>If the word starts with a vowel (A/E/I/O/U) then 'way' is appended to the word.</li>
+    <li>If the word starts with a consonant, and also contains A/E/I/O/U (and Y when not the first letter), then all consonants before the first vowel are moved to the end of the word.  'ay' is appended to the word.  </li>
+  </ul>
 
-  <div class="alert alert-danger" [hidden]="convertText.untouched || convertText.valid">
-    Please populate the <strong>Text to Convert</strong> field.
-  </div>
+</div>
 
-  <button class="btn btn-primary" [disabled]="!convertText.valid">
-    <span class="fa fa-wrench"> </span>
-    Convert
-  </button>
-</form>
+<div *ngIf="this.convertedText != ''">
+  <h1>Converter Results</h1>
+  <hr />
+  <h2>Original Text</h2>
+  <p class="textBeforeConversion">{{ this.convertText.value }}</p>
+  <h2>Converted Text</h2>
+  <p class="textAfterConversion">{{ this.convertedText }}</p>
+
+  <button class="btn btn-primary" (click)="this.reset();">Back</button> &nbsp;
+  <button class="btn btn-secondary" (click)="this.viewHistory();">View History</button>
+</div>

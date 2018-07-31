@@ -1,1 +1,13 @@
 <h1>History</h1>
+<p>Previous 10 conversion results:</p>
+<div *ngIf="history.length == 0">
+  <div class="alert alert-warning">
+    There is no conversion history yet.
+  </div>
+</div>
+<div *ngFor="let item of history; let myIndex = index">
+  <strong>{{ myIndex + 1}}. {{ item.text }}</strong><br />
+  {{ item.result }}
+  <hr />
+
+</div>

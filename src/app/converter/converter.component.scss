@@ -1,0 +1,9 @@
+@import '../_shared/scss/variables.scss';
+
+.textBeforeConversion {
+  color: $info;
+}
+
+.textAfterConversion {
+  color: $success;
+}

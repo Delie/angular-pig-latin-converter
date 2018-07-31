@@ -12,4 +12,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  viewSource() {
+    window.open('https://github.com/Delie/pig-latin-converter');
+  }
 }
