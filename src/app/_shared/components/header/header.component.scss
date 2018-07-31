@@ -7,9 +7,17 @@
   background: $primary;
 }
 
+#header a {
+  color: #fff;
+  text-decoration: none;
+}
+
 #headerLinks {
   background: #ddd;
   padding: 10px;
 }
 
-#headerLinks a { color:#222; margin-right:15px;}
+#headerLinks a {
+  color: #222;
+  margin-right: 15px;
+}
