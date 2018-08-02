@@ -3,10 +3,9 @@
     "",
     "\\src\\app",
     "\\src\\app\\converter",
-    "\\src\\app\\converter-history",
     "\\src\\app\\_shared",
-    "\\src\\app\\_shared\\components\\header",
-    "\\src\\app\\_shared\\services"
+    "\\src\\app\\_shared\\components",
+    "\\src\\app\\_shared\\components\\header"
   ],
   "PreviewInSolutionExplorer": false
 }
