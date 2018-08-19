@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\e2e",
+    "\\src",
     "\\src\\app",
     "\\src\\app\\converter",
-    "\\src\\app\\_shared",
-    "\\src\\app\\_shared\\components",
-    "\\src\\app\\_shared\\components\\header"
+    "\\src\\app\\_shared"
   ],
+  "SelectedNode": "\\src\\app\\converter\\converter.component.ts",
   "PreviewInSolutionExplorer": false
 }

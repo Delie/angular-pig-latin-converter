@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedModule } from './../_shared/shared.module';
 import { ConverterHistoryComponent } from './converter-history.component';
 
 describe('ConverterHistoryComponent', () => {
@@ -8,6 +9,7 @@ describe('ConverterHistoryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [SharedModule],
       declarations: [ ConverterHistoryComponent ]
     })
     .compileComponents();

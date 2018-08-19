@@ -22,10 +22,11 @@ export class ConverterComponent implements OnInit {
     this.convertedText = this.converter.convert(this.convertText.value);
 
     // Save history
-    let history = this.state.get('History');
+    const history = this.state.get('History');
     history.unshift({ text: this.convertText.value, result: this.convertedText });
-    if (history.length > 10)
+    if (history.length > 10) {
       history.splice(10, 1);
+    }
     this.state.set('History', history);
   }
 

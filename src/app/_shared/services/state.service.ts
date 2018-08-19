@@ -9,7 +9,7 @@ export class StateService {
   get state() {
     return this._state = this._clone(this._state);
   }
-  
+
   set state(value) {
     throw new Error('do not mutate the `.state` directly');
   }
@@ -17,8 +17,9 @@ export class StateService {
   get(prop?: any) {
     const state = this.state;
     let o = null;
-    if (state.hasOwnProperty(prop))
+    if (state.hasOwnProperty(prop)) {
       o = state[prop];
+    }
     return o;
   }
 

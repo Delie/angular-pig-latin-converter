@@ -7,8 +7,13 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display the page header', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to pig-latin-converter!');
+    expect(page.getSiteHeaderText()).toEqual('Pig Latin Converter');
+  });
+
+  it('should contain a H1 tag with content', () => {
+    page.navigateTo();
+    expect(page.getHeadingText()).not.toBe('');
   });
 });

@@ -1,4 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { StateService } from '../_shared/services/state.service';
+import { ConverterService } from './converter.service';
 
 import { ConverterComponent } from './converter.component';
 
@@ -8,9 +13,11 @@ describe('ConverterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConverterComponent ]
+      providers: [StateService, ConverterService],
+      imports: [FormsModule, ReactiveFormsModule, RouterTestingModule],
+      declarations: [ConverterComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
