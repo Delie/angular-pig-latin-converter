@@ -1,4 +1,4 @@
 # Angular6-test-project
 
-Just a simple test project to demonstrate Angular 6.1, Angular CLI 6.1, Bootstrap 4.1, and FontAwesome 4.7
+Simple test project to demonstrate Angular 6.1, Angular CLI 6.1, Bootstrap 4.1, and FontAwesome 4.7
 
