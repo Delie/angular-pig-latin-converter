@@ -1,4 +1,4 @@
-# pig-latin-converter
+# Angular6-test-project
 
-This tool was written by Andrew Delicata to demonstrate the use of Angular 6.1, Angular CLI 6.1, Bootstrap 4.1, and FontAwesome 4.7
+Just a simple test project to demonstrate Angular 6.1, Angular CLI 6.1, Bootstrap 4.1, and FontAwesome 4.7
 
