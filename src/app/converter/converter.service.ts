@@ -42,5 +42,4 @@ export class ConverterService {
     }
     return newWord;
   }
-
 }
